@@ -1,23 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
+
+function App(props) {
+  
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      点击了<span id="value">{props.value}</span>次
+        <div>
+          <button id="add" onClick={()=>{props.add1()}}>+1</button>
+          <button id="add2" onClick={()=>{props.add2()}}>+2</button>
+          <button id="addIfOdd" onClick={()=>{props.add3()}}>如果是单数就+1</button>
+          <button id="addAfter2Sec" onClick={()=>{props.add4()}}>2s后+1</button>
+        </div>
     </div>
   );
 }
